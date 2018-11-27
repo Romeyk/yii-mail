@@ -1,0 +1,14 @@
+{
+    "name": "romeyk/yii-mail",
+    "description": "Fork of a Mail extension for Yii that wraps Swift Mailer",
+    "authors": [
+        {
+            "name": "Roman Chuykov",
+            "email": "mail@romeyk.org.ua"
+        }
+    ],
+    "require": {
+        "yiisoft/yii": "1.1.*",
+        "swiftmailer/swiftmailer": "5.*"
+    }
+}
