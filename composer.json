@@ -1,6 +1,7 @@
 {
     "name": "romeyk/yii-mail",
     "description": "Fork of a Mail extension for Yii that wraps Swift Mailer",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Roman Chuykov",
