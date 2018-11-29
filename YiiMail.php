@@ -68,6 +68,11 @@ class YiiMail extends CApplicationComponent
 	* Defaults to 'application.views.mail'.
 	*/
 	public $viewPath = 'application.views.mail';
+
+	/**
+	 * @var string path to swiftmailer
+	 */
+	public $swiftMailerPath = 'application.vendor.swiftmailer.swiftmailer';
 	
 	/**
 	* @var string options specific to the transport type being used.
@@ -237,8 +242,8 @@ class YiiMail extends CApplicationComponent
     public function registerScripts() {
     	if (self::$registeredScripts) return;
     	self::$registeredScripts = true;
-		require dirname(__FILE__).'/vendors/swiftMailer/classes/Swift.php';
+		require Yii::getPathOfAlias($this->swiftMailerPath) . '/lib/classes/Swift.php';
 		Yii::registerAutoloader(array('Swift','autoload'));
-		require dirname(__FILE__).'/vendors/swiftMailer/swift_init.php';
+		require Yii::getPathOfAlias($this->swiftMailerPath) . '/lib/swift_init.php';
 	}
 }
